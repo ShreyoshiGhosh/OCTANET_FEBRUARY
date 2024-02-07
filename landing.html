@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <meta charset = "UTF-8">
+        <title> JUJUTSU KAISEN | Landing Page UI Design</title>
+        <link rel ="stylesheet" href = "style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href = "#" class = "logo"><img src = "logo2.png"></a>
+            <div class  = "toggle"> <img src = "toggle.png"></div>
+        </header>
+
+        <div class  = "banner">
+            <div class = "content">
+                <h2> <span> yowai mo</span></h2>
+                <h2>In all the heavens and the earth, I alone am the honored one</h2>
+            
+                <p> "Jujutsu Kaisen is a captivating Japanese anime series that follows Yuji Itadori, a high school student with extraordinary combat skills. When supernatural curses threaten the world, he joins a secret organization to battle these malevolent forces, blending action, humor, and dark themes seamlessly."</p>
+                <a href = "#" class = "play" onclick="toggle();"><img src = "play.png"> Watch Trailer</a>
+                <div class = "slide"></div>
+                <ul class = "sci">
+                    <li><a href = "#"><img src = "facebook.png"></a></li>
+                    <li><a href = "#"><img src = "twitter.png"></a></li>
+                    <li><a href = "#"><img src = "instagram.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="trailer">
+            <video src="trailer.mp4" controls="true"></video>
+            <img src="close.png" class="close" onclick="toggle();">
+        </div>
+        <script type="text/javascript">
+            function toggle(){
+                var trailer = document.querySelector('.trailer');
+                var video = document.querySelector('.video');
+                trailer.classList.toggle('active');
+                video.currentTime = 0;
+                video.pause();
+            }
+        </script>
+    </body>
+</html>
